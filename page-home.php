@@ -15,11 +15,13 @@
     $lander_btn_2_link      =   get_field('lander_btn_2_link');
 
     //About Section Variables
-    $about_section_intro      =   get_field('about_section_intro');
+    $about_section_intro        =   get_field('about_section_intro');
     $about_section_title        =   get_field('about_section_title');
     $about_section_description  =   get_field('about_section_description');
 
-    
+    //Services Section Variables
+    $services_intro     =   get_field('services_intro');
+    $services_title     =   get_field('services_title');
 
     get_header();
 ?>
@@ -130,82 +132,19 @@
         </div> <!-- end section-header -->
 
         <div class="row services-list block-1-2 block-tab-full">
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fas fa-hand-holding-usd"></i>
+            <?php $loop = new WP_Query( array( 'post_type' => 'service_options', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+            
+            <?php while( $loop->have_posts()): $loop->the_post(); ?>
+                <div class="col-block service-item" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="<?php the_field('service_icon'); ?>"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3 class="h2"><?php the_title(); ?></h3>
+                        <?php the_field('service_description'); ?>
+                    </div>
                 </div>
-                <div class="service-text">
-                    <h3 class="h2">Seed Capital</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-paint-brush"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Brand Identity</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-megaphone"></i>
-                </div>  
-                <div class="service-text">
-                    <h3 class="h2">Marketing</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-earth"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Web Design</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <!-- <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-cube"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Packaging Design</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div> -->
-    
-            <!-- <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"><i class="icon-lego-block"></i></div>
-                <div class="service-text">
-                    <h3 class="h2">Web Development</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div> -->
+            <?php endwhile; ?>
 
         </div> <!-- end services-list -->
 
