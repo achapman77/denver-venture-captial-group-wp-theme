@@ -1,11 +1,30 @@
 <?php
     /* Template Name: Home Page */
+
+    // Advanced Custom Fields
+
+    // Header Variables
+
+    //Lander Section Variables
+    $lander_feature_image   =   get_field('lander_feature_image');
+    $lander_title           =   get_field('lander_title');
+    $lander_description     =   get_field('lander_description');
+    $lander_btn_1_text      =   get_field('lander_btn_1_text');
+    $lander_btn_1_link      =   get_field('lander_btn_1_link');
+    $lander_btn_2_text      =   get_field('lander_btn_2_text');
+    $lander_btn_2_link      =   get_field('lander_btn_2_link');
+
+
     get_header();
 ?>
 
 <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="<?php bloginfo('stylesheet_directory');?>/images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src=
+        "<?php if( !empty($lander_feature_image) ) : ?>
+            <?php echo $lander_feature_image['url']; ?>
+        <?php endif; ?>" 
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -14,21 +33,18 @@
 
             <div class="row home-content__main">
 
-                <h3>Welcome to Denver Venture Capital Group</h3>
+                <h3><?php echo $lander_title; ?></h3>
 
                 <h1>
-                    We are a creative & driven group <br>
-                    of people who help bring <br>
-                    diverse & influential ideas <br>
-                    to life.
+                    <?php echo $lander_description; ?>
                 </h1>
 
                 <div class="home-content__buttons">
-                    <a href="#contact" class="smoothscroll btn btn--stroke">
-                        Pitch a Project
+                    <a href="<?php echo $lander_btn_1_link; ?>" class="smoothscroll btn btn--stroke">
+                        <?php echo $lander_btn_1_text; ?>
                     </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
-                        More About Us
+                    <a href="<?php echo $lander_btn_2_link; ?>" class="smoothscroll btn btn--stroke">
+                        <?php echo $lander_btn_2_text; ?>
                     </a>
                 </div>
 

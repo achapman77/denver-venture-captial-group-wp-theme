@@ -9,6 +9,18 @@
  * @package dvcg-wp-theme
  */
 
+ // Header Variables
+ $header_logo       =   get_field('header_logo');
+ $menu_description  =   get_field('menu_description');
+ $facebook_url      =   get_field('facebook_url');
+ $facebook_icon      =   get_field('facebook_icon');
+ $linkedin_url      =   get_field('linkedin_url');
+ $linkedin_icon      =   get_field('linkedin_icon');
+ $twitter_url      =   get_field('twitter_url');
+ $twitter_icon      =   get_field('twitter_icon');
+ $instagram_url      =   get_field('instagram_url');
+ $instagram_icon      =   get_field('instagram_icon');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -62,7 +74,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Homepage">
+                <img src="<?php echo $header_logo['url']; ?>" alt="<?php echo $header_logo['alt']; ?>">
                 
             </a>
         </div>
@@ -89,18 +101,31 @@
 					)); 
 				?>
     
-                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+                <p><?php echo $menu_description; ?></p>
     
                 <ul class="header-nav__social">
-                    <li>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
+                    <?php if( !empty($facebook_url) ): ?>
+                        <li>
+                            <a href="<?php echo $facebook_url; ?>"><?php echo $facebook_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if( !empty($linkedin_url) ): ?>
+                        <li>
+                            <a href="<?php echo $linkedin_url; ?>"><?php echo $linkedin_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if( !empty($twitter_url) ): ?>
+                        <li>
+                            <a href="<?php echo $twitter_url; ?>"><?php echo $twitter_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if( !empty($instagram_url) ): ?>
+                        <li>
+                            <a href="<?php echo $instagram_url; ?>"><?php echo $instagram_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    
+                    
 				</ul>
 				
 				
