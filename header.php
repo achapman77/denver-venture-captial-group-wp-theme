@@ -85,15 +85,6 @@
 
             <div class="header-nav__content">
                 <h3>Navigation</h3>
-                
-                <!-- <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-                    <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
-                    <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
-                    <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li>
-                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
-				</ul> -->
 				
 				<?php wp_nav_menu( array(
 					'theme_location' 	=> 	'primary',

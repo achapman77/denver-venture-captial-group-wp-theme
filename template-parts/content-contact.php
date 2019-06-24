@@ -1,3 +1,33 @@
+<?php 
+//Contact Section Variables
+$contact_subheader  = get_field('contact_subheader');
+$contact_header     = get_field('contact_header');
+$contact_form_title = get_field('contact_form_title');
+$address_title      = get_field('address_title');
+$street_address     = get_field('street_address');
+$city               = get_field('city');
+$state              = get_field('state');
+$zipcode            = get_field('zipcode');
+$country            = get_field('country');
+$email_title        = get_field('email_title');
+$email              = get_field('email');
+$phone_title        = get_field('phone_title');
+$phone_number       = get_field('phone_number');
+$message_warning    = get_field('message_warning');
+$message_success    = get_field('message_success');
+
+
+//Social Media Variables
+$facebook_url       = get_field('facebook_url');
+$facebook_icon      = get_field('facebook_icon');
+$linkedin_url       = get_field('linkedin_url');
+$linkedin_icon      = get_field('linkedin_icon');
+$twitter_url        = get_field('twitter_url');
+$twitter_icon       = get_field('twitter_icon');
+$instagram_url      = get_field('instagram_url');
+$instagram_icon     = get_field('instagram_icon');
+?>
+
 <section id="contact" class="s-contact">
 
     <div class="overlay"></div>
@@ -5,8 +35,8 @@
 
     <div class="row section-header" data-aos="fade-up">
         <div class="col-full">
-            <h3 class="subhead">Contact Us</h3>
-            <h1 class="display-2 display-2--light">Reach out to discuss your idea</h1>
+            <h3 class="subhead"><?php echo $contact_subheader; ?></h3>
+            <h1 class="display-2 display-2--light"><?php echo $contact_header; ?></h1>
         </div>
     </div>
 
@@ -14,46 +44,17 @@
         
         <div class="contact-primary">
 
-            <h3 class="h6">Send Us A Message</h3>
-
-            <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
-                <fieldset>
-
-                <div class="form-field">
-                    <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
-                </div>
-                <div class="form-field">
-                    <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
-                </div>
-                <div class="form-field">
-                    <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
-                </div>
-                <div class="form-field">
-                    <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
-                </div>
-                <div class="form-field">
-                    <button class="full-width btn--primary">Submit</button>
-                    <div class="submit-loader">
-                        <div class="text-loader">Sending...</div>
-                        <div class="s-loader">
-                            <div class="bounce1"></div>
-                            <div class="bounce2"></div>
-                            <div class="bounce3"></div>
-                        </div>
-                    </div>
-                </div>
-
-                </fieldset>
-            </form>
+            <h3 class="h6"><?php echo $contact_form_title; ?></h3>
+            <?php echo do_shortcode( '[contact-form-7 id="178" title="contactForm"]' ); ?>
 
             <!-- contact-warning -->
             <div class="message-warning">
-                Something went wrong. Please try again.
+                <?php echo $message_warning; ?>
             </div> 
         
             <!-- contact-success -->
             <div class="message-success">
-                Your message was sent, thank you!<br>
+                <?php echo $message_success; ?><br>
             </div>
 
         </div> <!-- end contact-primary -->
@@ -64,39 +65,49 @@
                 <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
 
                 <div class="cinfo">
-                    <h5>Where to Find Us</h5>
+                    <h5><?php echo $address_title; ?></h5>
                     <p>
-                        201 Milwaukee St. Suite 200<br>
-                        Denver, CO<br>
-                        80206 US
+                        <?php echo $street_address; ?><br>
+                        <?php echo $city; ?>, <?php echo $state; ?><br>
+                        <?php echo $zipcode; ?> <?php $country; ?>
                     </p>
                 </div>
 
                 <div class="cinfo">
-                    <h5>Email Us At</h5>
+                    <h5><?php echo $email_title; ?></h5>
                     <p>
-                        info@dvcg.com
+                        <?php echo $email; ?>
                     </p>
                 </div>
 
                 <div class="cinfo">
-                    <h5>Call Us At</h5>
+                    <h5><?php echo $phone_title; ?></h5>
                     <p>
-                        Phone: 720-651-9222<br>
+                        <?php echo $phone_number; ?><br>
                     </p>
                 </div>
 
                 <ul class="contact-social">
-                    <li>
-                        <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    
+                    <?php if( !empty($facebook_url) ): ?>
+                        <li>
+                            <a href="<?php echo $facebook_url; ?>"><?php echo $facebook_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if( !empty($linkedin_url) ): ?>
+                        <li>
+                            <a href="<?php echo $linkedin_url; ?>"><?php echo $linkedin_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if( !empty($twitter_url) ): ?>
+                        <li>
+                            <a href="<?php echo $twitter_url; ?>"><?php echo $twitter_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if( !empty($instagram_url) ): ?>
+                        <li>
+                            <a href="<?php echo $instagram_url; ?>"><?php echo $instagram_icon; ?></a>
+                        </li>
+                    <?php endif; ?>
                 </ul> <!-- end contact-social -->
 
             </div> <!-- end contact-info -->

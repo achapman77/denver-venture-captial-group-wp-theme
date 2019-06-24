@@ -23,7 +23,7 @@
                     <a href="<?php the_field('client_website'); ?>" title="<?php the_title(); ?>" class="clients__slide">
                         <img src="<?php the_field('client_logo'); ?>" />
                     </a>
-                <?php endwhile; ?>
+                <?php endwhile; wp_reset_query(); ?>
                     
             </div> <!-- end clients -->
         </div> <!-- end col-full -->
@@ -46,7 +46,7 @@
                         </div>
 
                     </div>
-                <?php endwhile; ?>
+                <?php endwhile; wp_reset_query(); ?>
 
             </div><!-- end testimonials -->
             

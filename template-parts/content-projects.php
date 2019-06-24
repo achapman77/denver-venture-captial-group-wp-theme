@@ -53,7 +53,7 @@
     
                         </div>
                     </div> <!-- end masonry__brick -->
-                <?php endwhile; ?>
+                <?php endwhile; wp_reset_query();?>
 
             </div> <!-- end masonry -->
         </div> <!-- end col-full -->
