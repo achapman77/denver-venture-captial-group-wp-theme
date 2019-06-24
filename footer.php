@@ -13,7 +13,12 @@
 
 	</div><!-- #content -->
 
-	<!-- Footer -->
+<!-- Footer -->
+
+
+
+    
+    
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
@@ -23,6 +28,8 @@
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery-3.2.1.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
+
+
 
 </body>
 </html>

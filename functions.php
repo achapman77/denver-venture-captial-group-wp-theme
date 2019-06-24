@@ -6,7 +6,13 @@
  *
  * @package dvcg-wp-theme
  */
-
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_page('Footer');
+	
+};
 if ( ! function_exists( 'dvcg_wp_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

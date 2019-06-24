@@ -1,47 +1,11 @@
-<?php
-    /* Template Name: Home Page */
-    
-    //Footer Variables
+<?php 
+//Footer Variables
 $footer_mission_statement   =   get_field('footer_mission_statement');
 $footer_subscribe_title     =   get_field('footer_subscribe_title');
 $footer_subscribe_body      =   get_field('footer_subscribe_body');
-
-    get_header();
 ?>
 
-    <!-- Lander
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'lander' ); ?>
-    
-
-    <!-- about
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'about' ); ?>
-
-
-    <!-- services
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'services' ); ?>
-
-
-    <!-- works
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'projects' ); ?>
-    
-
-    <!-- clients
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'clients' ); ?>
-    
-
-    <!-- contact
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'contact' ); ?>
-
-
-    <!-- footer
-    ================================================== -->
-    <footer>
+<footer>
         <div class="row footer-main">
 
             <div class="col-six tab-full left footer-desc">
@@ -84,20 +48,3 @@ $footer_subscribe_body      =   get_field('footer_subscribe_body');
         </div> <!-- end footer-bottom -->
 
     </footer> <!-- end footer -->
-
-
-    <!-- photoswipe background
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'photoswipe' ); ?>
-
-
-    <!-- preloader
-    ================================================== -->
-    <?php get_template_part( 'template-parts/content', 'preloader' ); ?>
-
-
-
-
-
-<?php get_footer(); ?>
-
