@@ -8,18 +8,22 @@
  *
  * @package dvcg-wp-theme
  */
+//Favicons
+$apple_touch_icon   =   get_field('apple_touch_icon');
+$favicon_32x32      =   get_field('favicon_32x32');
+$favicon_16x16      =   get_field('favicon_16x16');
 
- // Header Variables
- $header_logo       =   get_field('header_logo');
- $menu_description  =   get_field('menu_description');
- $facebook_url      =   get_field('facebook_url');
- $facebook_icon      =   get_field('facebook_icon');
- $linkedin_url      =   get_field('linkedin_url');
- $linkedin_icon      =   get_field('linkedin_icon');
- $twitter_url      =   get_field('twitter_url');
- $twitter_icon      =   get_field('twitter_icon');
- $instagram_url      =   get_field('instagram_url');
- $instagram_icon      =   get_field('instagram_icon');
+// Header Variables
+$header_logo        =   get_field('header_logo');
+$menu_description   =   get_field('menu_description');
+$facebook_url       =   get_field('facebook_url');
+$facebook_icon      =   get_field('facebook_icon');
+$linkedin_url       =   get_field('linkedin_url');
+$linkedin_icon      =   get_field('linkedin_icon');
+$twitter_url        =   get_field('twitter_url');
+$twitter_icon       =   get_field('twitter_icon');
+$instagram_url      =   get_field('instagram_url');
+$instagram_icon     =   get_field('instagram_icon');
 
 ?>
 <!doctype html>
@@ -46,10 +50,10 @@
 
     <!-- favicons
     ================================================== -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon_io/manifest.json"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $apple_touch_icon['url']; ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $favicon_32x32['url']; ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $favicon_16x16['url']; ?>">
+    <link rel="manifest" href="<?php bloginfo( 'stylesheet_directory'); ?>/images/favicon_io/manifest.json">
 
     <!-- fontawesome
     ==================================================== -->
