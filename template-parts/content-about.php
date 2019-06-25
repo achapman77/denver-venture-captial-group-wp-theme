@@ -29,7 +29,7 @@
                 <div class="stats__count"><?php the_field('stat_value'); ?></div>
                 <h5><?php the_title(); ?></h5>
             </div>
-        <?php endwhile; ?>
+        <?php endwhile; wp_reset_query(); ?>
         
     </div> <!-- end about-stats -->
 

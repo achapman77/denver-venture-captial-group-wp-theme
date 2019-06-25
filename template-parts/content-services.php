@@ -26,7 +26,7 @@
                     <?php the_field('service_description'); ?>
                 </div>
             </div>
-        <?php endwhile; ?>
+        <?php endwhile; wp_reset_query(); ?>
 
     </div> <!-- end services-list -->
 
