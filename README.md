@@ -39,3 +39,25 @@ Select these repeating elements along the left hand bar and edit/delete each ele
 
 ![Repeating Elements](https://user-images.githubusercontent.com/5178260/60137145-4f546c00-9763-11e9-8118-171acd7b7eb3.png)
 
+---
+## Here are the repeating elements in order on page (and in sidebar)
+---
+### About Section Stats
+![about stats](https://user-images.githubusercontent.com/5178260/60137501-5465eb00-9764-11e9-83ec-5729fb915527.png)
+
+---
+### Service Options
+![Services](https://user-images.githubusercontent.com/5178260/60137524-6d6e9c00-9764-11e9-8d29-caea6ca09270.png)
+
+---
+### Projects
+![Clients](https://user-images.githubusercontent.com/5178260/60137530-72cbe680-9764-11e9-85a8-d85cd89ef5de.png)
+
+---
+### Client Logos
+![Companies](https://user-images.githubusercontent.com/5178260/60137538-77909a80-9764-11e9-93c4-e391be52203d.png)
+
+---
+### Client Testimonials
+![Client Testimonials](https://user-images.githubusercontent.com/5178260/60137541-7a8b8b00-9764-11e9-94a3-a43ca645c40b.png)
+
