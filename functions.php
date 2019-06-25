@@ -50,8 +50,8 @@ if ( ! function_exists( 'dvcg_wp_theme_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' 				=> esc_html__( 'Primary', 'dvcg-wp-theme' ),
-			
+			'primary' 	=> esc_html__( 'Primary', 'dvcg-wp-theme' ),
+			'footer' 	=> esc_html__( 'Footer Menu', 'dvcg-wp-them' ),
 		) );
 
 		/*
