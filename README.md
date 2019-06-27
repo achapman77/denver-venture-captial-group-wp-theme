@@ -8,10 +8,10 @@ Must purchase Glint license for use: https://colorlib.com/wp/product/glint/
 - Customizable Contact Form utilizing Contact Form 7
 
 ## Future Improvments
-- [ ] Custom Color Picker for quick theme changes
-- [ ] Improved 404.php
+- [ ] Custom Color Picker for quick color theme changes
 - [ ] Convert Social Media Links Custom Advanced Fields into CPT UI.  Will enable any social media of user choice.
 - [ ] SEO and Security Enhancments
+- [ ] Improved 404.php
 
 ## Customizing the Theme
 ---
