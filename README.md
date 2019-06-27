@@ -1,5 +1,5 @@
 # DVCG WP Theme
-A Custom WP theme built off of the Glint static theme for the Denver Venture Capital Group.
+A dynamic WP theme built off of the Glint static theme for the Denver Venture Capital Group.
 
 Must purchase Glint license for use: https://colorlib.com/wp/product/glint/
 
