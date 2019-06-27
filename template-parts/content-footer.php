@@ -1,8 +1,8 @@
 <?php 
 //Footer Variables
-$footer_mission_statement   =   get_field('footer_mission_statement');
-$footer_subscribe_title     =   get_field('footer_subscribe_title');
-$footer_subscribe_body      =   get_field('footer_subscribe_body');
+$footer_mission_statement   =   get_field('footer_mission_statement', '13');
+$footer_subscribe_title     =   get_field('footer_subscribe_title', '13');
+$footer_subscribe_body      =   get_field('footer_subscribe_body', '13');
 ?>
 
 <footer>

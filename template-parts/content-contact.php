@@ -88,26 +88,14 @@ $instagram_icon     = get_field('instagram_icon');
                 </div>
 
                 <ul class="contact-social">
-                    <?php if( !empty($facebook_url) ): ?>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'social_media', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+							
+                    <?php while( $loop->have_posts()): $loop->the_post(); ?>
                         <li>
-                            <a href="<?php echo $facebook_url; ?>"><?php echo $facebook_icon; ?></a>
+                            <a href="<?php the_field('social_media_url'); ?>"><?php the_field('social_media_icon'); ?></a>
                         </li>
-                    <?php endif; ?>
-                    <?php if( !empty($linkedin_url) ): ?>
-                        <li>
-                            <a href="<?php echo $linkedin_url; ?>"><?php echo $linkedin_icon; ?></a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if( !empty($twitter_url) ): ?>
-                        <li>
-                            <a href="<?php echo $twitter_url; ?>"><?php echo $twitter_icon; ?></a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if( !empty($instagram_url) ): ?>
-                        <li>
-                            <a href="<?php echo $instagram_url; ?>"><?php echo $instagram_icon; ?></a>
-                        </li>
-                    <?php endif; ?>
+                    <?php endwhile; wp_reset_query(); ?>
+                    
                 </ul> <!-- end contact-social -->
 
             </div> <!-- end contact-info -->

@@ -9,21 +9,14 @@
  * @package dvcg-wp-theme
  */
 //Favicons
-$apple_touch_icon   =   get_field('apple_touch_icon');
-$favicon_32x32      =   get_field('favicon_32x32');
-$favicon_16x16      =   get_field('favicon_16x16');
+$apple_touch_icon   =   get_field('apple_touch_icon', '13');
+$favicon_32x32      =   get_field('favicon_32x32', '13');
+$favicon_16x16      =   get_field('favicon_16x16', '13');
 
 // Header Variables
-$header_logo        =   get_field('header_logo');
-$menu_description   =   get_field('menu_description');
-$facebook_url       =   get_field('facebook_url');
-$facebook_icon      =   get_field('facebook_icon');
-$linkedin_url       =   get_field('linkedin_url');
-$linkedin_icon      =   get_field('linkedin_icon');
-$twitter_url        =   get_field('twitter_url');
-$twitter_icon       =   get_field('twitter_icon');
-$instagram_url      =   get_field('instagram_url');
-$instagram_icon     =   get_field('instagram_icon');
+$header_logo        =   get_field('header_logo', '13');
+$menu_description   =   get_field('menu_description', '13');
+
 
 ?>
 <!doctype html>
@@ -90,7 +83,8 @@ $instagram_icon     =   get_field('instagram_icon');
             <div class="header-nav__content">
                 <h3>Navigation</h3>
 				
-				<?php wp_nav_menu( array(
+				<?php 
+                    wp_nav_menu( array(
 					'theme_location' 	=> 	'primary',
 					'menu_class' 		=> 	'header-nav__list'
 					)); 
@@ -99,28 +93,13 @@ $instagram_icon     =   get_field('instagram_icon');
                 <p><?php echo $menu_description; ?></p>
     
                 <ul class="header-nav__social">
-                    <?php if( !empty($facebook_url) ): ?>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'social_media', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+							
+                    <?php while( $loop->have_posts()): $loop->the_post(); ?>
                         <li>
-                            <a href="<?php echo $facebook_url; ?>"><?php echo $facebook_icon; ?></a>
+                            <a href="<?php the_field('social_media_url'); ?>"><?php the_field('social_media_icon'); ?></a>
                         </li>
-                    <?php endif; ?>
-                    <?php if( !empty($linkedin_url) ): ?>
-                        <li>
-                            <a href="<?php echo $linkedin_url; ?>"><?php echo $linkedin_icon; ?></a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if( !empty($twitter_url) ): ?>
-                        <li>
-                            <a href="<?php echo $twitter_url; ?>"><?php echo $twitter_icon; ?></a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if( !empty($instagram_url) ): ?>
-                        <li>
-                            <a href="<?php echo $instagram_url; ?>"><?php echo $instagram_icon; ?></a>
-                        </li>
-                    <?php endif; ?>
-                    
-                    
+                    <?php endwhile; wp_reset_query(); ?>
 				</ul>
 				
 				

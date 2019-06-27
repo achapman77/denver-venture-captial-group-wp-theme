@@ -51,15 +51,13 @@
 
 
     <ul class="home-social">
-        <li>
-            <a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-        </li>
-        <li>
-            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-        </li>
-        <li>
-            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-        </li>
+        <?php $loop = new WP_Query( array( 'post_type' => 'social_media', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+							
+        <?php while( $loop->have_posts()): $loop->the_post(); ?>
+            <li>
+                <a href="<?php the_field('social_media_url'); ?>"><?php the_field('social_media_icon'); ?><span><?php the_title(); ?></span></a>
+            </li>
+        <?php endwhile; wp_reset_query(); ?>
     </ul> 
     <!-- end home-social -->
 
