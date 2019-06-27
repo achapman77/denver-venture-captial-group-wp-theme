@@ -24,20 +24,20 @@ Here you will see multiple collapsed sections for each part of the page.
 
 Select a section to begin customizing the content.
 
-![Expand Section](https://user-images.githubusercontent.com/5178260/60136842-88d8a780-9762-11e9-9faf-269bdced0b02.png)
+![Expand Section](https://user-images.githubusercontent.com/5178260/60239347-937e6400-986a-11e9-9168-dcc432c8169f.png)
 
 
 ---
 Each section will have multiple content areas to customize and may have tabbed sections as well with content to customize.
 
-![Edit Content](https://user-images.githubusercontent.com/5178260/60137037-0dc3c100-9763-11e9-8069-8961e5cc2398.png)
+![Expanded Section](https://user-images.githubusercontent.com/5178260/60239075-a9d7f000-9869-11e9-8497-a1d6dcff0e90.png)
 
 ---
 For repeating elements where the number of elements is variable, I created separate sections (Custom Post Types).
 
 Select these repeating elements along the left hand bar and edit/delete each element (post)
 
-![Repeating Elements](https://user-images.githubusercontent.com/5178260/60137145-4f546c00-9763-11e9-8118-171acd7b7eb3.png)
+![Repeating Elements](https://user-images.githubusercontent.com/5178260/60239279-531ee600-986a-11e9-87bc-b995d6d78a16.png)
 
 ---
 ## Here are the repeating elements in order on page (and in sidebar)
