@@ -4,12 +4,12 @@ A dynamic WP theme built off of the Glint static theme for the Denver Venture Ca
 Must purchase Glint license for use: https://colorlib.com/wp/product/glint/
 
 ## Features
-- Fully customizable text and repeating elements using Advanced Custom Fields & Custom Post Type UI
+- Fully customizable text using Advanced Custom Fields
+- Repeating elements using Custom Post Type UI
 - Customizable Contact Form utilizing Contact Form 7
 
 ## Future Improvments
 - [ ] Custom Color Picker for quick color theme changes
-- [ ] Convert Social Media Links Custom Advanced Fields into CPT UI.  Will enable any social media of user choice.
 - [ ] SEO and Security Enhancments
 - [ ] Improved 404.php
 
@@ -41,6 +41,10 @@ Select these repeating elements along the left hand bar and edit/delete each ele
 
 ---
 ## Here are the repeating elements in order on page (and in sidebar)
+---
+### Social Media
+![social_media](https://user-images.githubusercontent.com/5178260/60238821-efe08400-9868-11e9-9233-70293912aadb.png)
+
 ---
 ### About Section Stats
 ![about stats](https://user-images.githubusercontent.com/5178260/60137501-5465eb00-9764-11e9-83ec-5729fb915527.png)
